@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.AutorController">
+   <children>
+      <AnchorPane layoutY="70.0" prefHeight="560.0" prefWidth="412.0" style="-fx-background-color: #09B1A0;">
+         <children>
+            <ImageView fitHeight="560.0" fitWidth="1030.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/images%20(3).jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnGuardarAut" disable="true" layoutX="295.0" layoutY="117.0" mnemonicParsing="false" onAction="#guardarRegistro" prefHeight="25.0" prefWidth="122.0" styleClass="buttonguardar" stylesheets="@../Styling/fullpackstyling.css" text="GUARDAR" />
+            <Button fx:id="btnEditarAut" layoutX="295.0" layoutY="309.0" mnemonicParsing="false" onAction="#limpiarComponentes" prefHeight="25.0" prefWidth="122.0" styleClass="buttoneditar" stylesheets="@../Styling/fullpackstyling.css" text="NUEVO" />
+            <Button fx:id="btnEliminarAut" layoutX="295.0" layoutY="402.0" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="25.0" prefWidth="122.0" styleClass="buttoneliminar" stylesheets="@../Styling/fullpackstyling.css" text="ELIMINAR" />
+            <ComboBox fx:id="cmbPaisAut" layoutX="16.0" layoutY="400.0" prefHeight="25.0" prefWidth="226.0" promptText="País" styleClass="buttonrefrescar" stylesheets="@../Styling/fullpackstyling.css" />
+            <Button fx:id="btnactualizaraut" disable="true" layoutX="295.0" layoutY="208.0" mnemonicParsing="false" onAction="#actualizarRegistro" prefHeight="25.0" prefWidth="122.0" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" text="ACTUALIZAR" />
+            <Button fx:id="btnrefrescar" layoutX="295.0" layoutY="14.0" mnemonicParsing="false" onAction="#orderBy" prefHeight="27.0" prefWidth="122.0" styleClass="buttonrefrescar" stylesheets="@../Styling/fullpackstyling.css" text="REFRESH" />
+            <TextField fx:id="txtcodigo" disable="true" layoutX="61.0" layoutY="52.0" prefHeight="25.0" prefWidth="55.0" promptText="ID" />
+            <JFXTextField fx:id="txtNomAut" layoutX="16.0" layoutY="209.0" prefHeight="25.0" prefWidth="226.0" promptText="Nombres" />
+            <JFXTextField fx:id="txtApeAut" layoutX="16.0" layoutY="310.0" prefHeight="25.0" prefWidth="226.0" promptText="Apellidos" />
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="267.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_replay_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="266.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_save_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="266.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_synchronize_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="266.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_delete_26px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="267.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_add_user_male_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="16.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_fingerprint_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="70.0" prefWidth="1137.0" style="-fx-background-color: #10B0CA;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="489.0" prefHeight="70.0" prefWidth="160.0" text="AUTOR" textFill="#ffdd00">
+               <font>
+                  <Font name="Agency FB Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/kisspng-writing-writer-essay-logo-act-writing-5abd4369e6bd82.8612457515223530019451.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="64.0" layoutX="1073.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/kisspng-author-writer-book-clip-art-writing-5ab9c15b943d50.5296455515221230996072.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="437.0" layoutY="70.0" prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #EAEC67;">
+         <children>
+            <ImageView fitHeight="447.0" fitWidth="701.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/imagen-la-parte-inventada.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblAutor" layoutY="117.0" prefHeight="443.0" prefWidth="701.0" stylesheets="@../Styling/fullpackstyling.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="117.0">
+              <columns>
+                <TableColumn fx:id="clmnnomaut" prefWidth="267.0" text="Nombre" />
+                <TableColumn fx:id="clmnapeaut" prefWidth="257.0" text="Apellido" />
+                  <TableColumn fx:id="clmnpaisaut" prefWidth="176.0" text="País" />
+              </columns>
+            </TableView>
+            <Label layoutX="198.0" layoutY="31.0" text="VISTA PREVIA" textFill="#00f2ea">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

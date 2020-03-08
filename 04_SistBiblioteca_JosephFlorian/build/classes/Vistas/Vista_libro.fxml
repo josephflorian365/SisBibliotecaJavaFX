@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Vista_libroController">
+   <children>
+      <AnchorPane layoutX="98.0" prefHeight="150.0" prefWidth="657.0" style="-fx-background-color: #FFD767;">
+         <children>
+            <ImageView fitHeight="443.0" fitWidth="657.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="301.0" fitWidth="408.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/book-307512_1280.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="cmbAutor" layoutX="21.0" layoutY="148.0" prefHeight="25.0" prefWidth="192.0" promptText="Autor" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" />
+            <ComboBox fx:id="cmbEditorial" layoutX="21.0" layoutY="215.0" prefHeight="25.0" prefWidth="192.0" promptText="Editorial" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" />
+            <Button fx:id="btnguardar" disable="true" layoutX="521.0" layoutY="60.0" mnemonicParsing="false" onAction="#guardarRegistro" prefHeight="25.0" prefWidth="121.0" styleClass="buttonguardar" stylesheets="@../Styling/fullpackstyling.css" text="GUADAR" />
+            <Button fx:id="btneditar" layoutX="521.0" layoutY="112.0" mnemonicParsing="false" onAction="#limpiarComponentes" prefHeight="25.0" prefWidth="121.0" styleClass="buttoneditar" stylesheets="@../Styling/fullpackstyling.css" text="NUEVO" />
+            <Button fx:id="btneliminar" layoutX="521.0" layoutY="167.0" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="25.0" prefWidth="121.0" styleClass="buttoneliminar" stylesheets="@../Styling/fullpackstyling.css" text="ELIMINAR" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="481.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_save_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="481.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_edit_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="482.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_delete_26px_3.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnactualizar" disable="true" layoutX="517.0" layoutY="215.0" mnemonicParsing="false" onAction="#actualizarRegistro" prefHeight="25.0" prefWidth="121.0" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" text="ACTUALIZAR" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="481.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_synchronize_64px.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutY="279.0" prefHeight="341.0" prefWidth="657.0" style="-fx-background-color: #566468;">
+               <children>
+                  <TableView fx:id="tblLibro" layoutX="1.0" layoutY="92.0" prefHeight="249.0" prefWidth="657.0" stylesheets="@../Styling/fullpackstyling.css">
+                    <columns>
+                      <TableColumn fx:id="clmntitulolibro" prefWidth="219.0" text="TITULO" />
+                        <TableColumn fx:id="clmnautorlibro" prefWidth="243.0" text="AUTOR" />
+                        <TableColumn fx:id="clmneditoriallibro" prefWidth="194.0" text="EDITORIAL" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="TOP_CENTER" layoutX="195.0" layoutY="18.0" prefHeight="36.0" prefWidth="268.0" text="Vista Previa" textFill="#f8f8f8">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnrefrescar" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#orderBy" styleClass="buttonrefrescar" stylesheets="@../Styling/fullpackstyling.css" text="REFRESH" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="90.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/icons8_replay_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="107.0" layoutX="566.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/kisspng-vector-graphics-book-computer-icons-encapsulated-p-5bf9f29b799da7.3176548015431072274982.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtcodigo" disable="true" layoutX="481.0" layoutY="32.0" prefHeight="25.0" prefWidth="61.0" promptText="ID" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="200.0" layoutY="14.0" text="REGISTRAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txttitulolibro" layoutX="21.0" layoutY="100.0" prefHeight="25.0" prefWidth="192.0" promptText="Titulo" />
+            <Label layoutX="21.0" layoutY="76.0" prefHeight="17.0" prefWidth="192.0" text="TITULO DEL LIBRO : " textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="622.0" prefWidth="98.0" style="-fx-background-color: #138BFF;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="35.0" layoutY="48.0" prefHeight="86.0" prefWidth="38.0" text="L">
+               <font>
+                  <Font name="Bauhaus 93" size="48.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="35.0" layoutY="157.0" prefHeight="86.0" prefWidth="38.0" text="I">
+               <font>
+                  <Font name="Bauhaus 93" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="268.0" prefHeight="86.0" prefWidth="38.0" text="B">
+               <font>
+                  <Font name="Bauhaus 93" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="392.0" prefHeight="86.0" prefWidth="38.0" text="R">
+               <font>
+                  <Font name="Bauhaus 93" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="494.0" prefHeight="98.0" prefWidth="38.0" text="O">
+               <font>
+                  <Font name="Bauhaus 93" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

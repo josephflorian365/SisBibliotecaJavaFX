@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Vista_usuarioController">
+   <children>
+      <AnchorPane layoutY="96.0" prefHeight="475.0" prefWidth="514.0" style="-fx-background-color: #A1DE9E;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="579.0" AnchorPane.topAnchor="96.0">
+         <children>
+            <ImageView fitHeight="496.0" fitWidth="665.0" layoutX="-8.0" opacity="0.23" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-128.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../imagenes/nin-o-leyendo-pixabay.jpeg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtCodigo" disable="true" layoutX="47.0" layoutY="22.0" prefHeight="25.0" prefWidth="89.0" promptText="ID" />
+            <JFXTextField fx:id="txtNombresUsu" layoutX="47.0" layoutY="85.0" prefHeight="25.0" prefWidth="354.0" promptText="Nombres" />
+            <JFXTextField fx:id="txtApeUsu" layoutX="47.0" layoutY="148.0" prefHeight="25.0" prefWidth="354.0" promptText="Apellidos" />
+            <JFXTextField fx:id="txtTelUsu" layoutX="47.0" layoutY="213.0" prefHeight="25.0" prefWidth="354.0" promptText="Teléfono" />
+            <JFXTextField fx:id="txtuserUsu" layoutX="47.0" layoutY="275.0" prefHeight="25.0" prefWidth="354.0" promptText="Nombre de usuario" />
+            <JFXTextField fx:id="txtcontraUsu" layoutX="47.0" layoutY="334.0" prefHeight="25.0" prefWidth="354.0" promptText="Password" AnchorPane.leftAnchor="47.0" />
+            <Button layoutX="402.0" layoutY="404.0" mnemonicParsing="false" onAction="#limpiarComponentes" styleClass="buttoneditar" stylesheets="@../Styling/fullpackstyling.css" text="NUEVO" />
+            <Button fx:id="btnGuUsu" layoutX="47.0" layoutY="404.0" mnemonicParsing="false" onAction="#guardarRegistro" styleClass="buttonguardar" stylesheets="@../Styling/fullpackstyling.css" text="GUARDAR" />
+            <Button fx:id="btnActUsu" disable="true" layoutX="164.0" layoutY="404.0" mnemonicParsing="false" onAction="#actualizarRegistro" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" text="ACTUALIZAR" />
+            <Button fx:id="btnElUsu" disable="true" layoutX="287.0" layoutY="404.0" mnemonicParsing="false" onAction="#eliminarRegistro" styleClass="buttoneliminar" stylesheets="@../Styling/fullpackstyling.css" text="ELIMINAR" />
+            <Button fx:id="btnrefrescar" layoutX="398.0" layoutY="21.0" mnemonicParsing="false" onAction="#orderby" styleClass="buttonrefrescar" stylesheets="@../Styling/fullpackstyling.css" text="REFRESH" />
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="14.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_customer_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="14.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_customer_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="14.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_phone_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="14.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_customer_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="14.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_secure_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="14.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_save_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="136.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_synchronize_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="260.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_delete_26px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="377.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_add_user_male_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="358.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_replay_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="9.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_fingerprint_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="513.0" layoutY="108.0" prefHeight="485.0" prefWidth="599.0" style="-fx-background-color: #9C9C9C;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="108.0">
+         <children>
+            <TableView fx:id="tblUs" layoutY="-11.0" prefHeight="496.0" prefWidth="599.0" styleClass="chart-plot-background" stylesheets="@../Styling/fullpackstyling.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-11.0">
+              <columns>
+                <TableColumn fx:id="clmnNombre" prefWidth="112.0" text="NOMBRES" />
+                <TableColumn fx:id="clmnApellido" prefWidth="124.0" text="APELLIDOS" />
+                  <TableColumn fx:id="clmnTelefono" prefWidth="106.0" text="TELÉFONO" />
+                  <TableColumn fx:id="clmnNombreUsuario" prefWidth="137.0" text="NOM. USUARIO" />
+                  <TableColumn fx:id="clmnPassword" prefWidth="119.0" text="CONTRASEÑA" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="98.0" prefWidth="1114.0" style="-fx-background-color: #429CE3;" AnchorPane.bottomAnchor="494.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="423.0" layoutY="14.0" prefHeight="70.0" prefWidth="268.0" text="USUARIOS">
+               <font>
+                  <Font name="Bell MT Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="98.0" fitWidth="112.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/—Pngtree—vector%20add%20user%20icon_3773557.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.PrestamoController">
+   <children>
+      <AnchorPane prefHeight="86.0" prefWidth="822.0" style="-fx-background-color: #138BFF;">
+         <children>
+            <Label layoutX="279.0" layoutY="15.0" text="PRESTAMOS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="79.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/relibrea-icono-manos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="79.0" layoutX="743.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/books-and-mouse.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="85.0" prefHeight="482.0" prefWidth="279.0" style="-fx-background-color: #4BCFDF;">
+         <children>
+            <ImageView fitHeight="483.0" fitWidth="345.0" layoutX="-4.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/83194926-smiling-male-shopper-using-credit-card-machine-at-checkout-counter-in-shop.jpg" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="cmbfecha" layoutX="17.0" layoutY="241.0" prefHeight="25.0" prefWidth="245.0" promptText="Fecha" styleClass="jfx-date-picker" stylesheets="@../Styling/fullpackstyling.css" />
+            <ComboBox fx:id="cmblibro" layoutX="18.0" layoutY="77.0" prefHeight="25.0" prefWidth="245.0" promptText="Libros" styleClass="buttondevolucion" stylesheets="@../Styling/fullpackstyling.css" />
+            <ComboBox fx:id="cmbusuario" layoutX="17.0" layoutY="162.0" prefHeight="25.0" prefWidth="245.0" promptText="Usuarios" styleClass="buttondevolucion" stylesheets="@../Styling/fullpackstyling.css" />
+            <Button fx:id="btnguardar" disable="true" layoutX="33.0" layoutY="369.0" mnemonicParsing="false" onAction="#guardarRegistro" prefHeight="27.0" prefWidth="224.0" styleClass="buttonguardar" stylesheets="@../Styling/fullpackstyling.css" text="GUARDAR" />
+            <Button fx:id="btnnuevo" layoutX="36.0" layoutY="326.0" mnemonicParsing="false" onAction="#limpiarComponentes" prefHeight="27.0" prefWidth="224.0" styleClass="buttoneditar" stylesheets="@../Styling/fullpackstyling.css" text="NUEVO" />
+            <Button fx:id="btneliminar" layoutX="33.0" layoutY="442.0" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="27.0" prefWidth="224.0" styleClass="buttoneliminar" stylesheets="@../Styling/fullpackstyling.css" text="ELIMINAR" />
+            <Button fx:id="btnactualizar" disable="true" layoutX="33.0" layoutY="406.0" mnemonicParsing="false" onAction="#actualizarRegistro" prefHeight="27.0" prefWidth="224.0" styleClass="buttonactualizar" stylesheets="@../Styling/fullpackstyling.css" text="ACTUALIZAR" />
+            <TextField fx:id="txtcodigo" disable="true" layoutX="18.0" layoutY="21.0" prefHeight="25.0" prefWidth="48.0" promptText="ID" />
+            <Button fx:id="btnrefrescar" layoutX="197.0" layoutY="20.0" mnemonicParsing="false" onAction="#orderBy" styleClass="buttonrefrescar" stylesheets="@../Styling/fullpackstyling.css" text="REFRESH" />
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="5.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_save_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="6.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_synchronize_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="6.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_delete_26px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="6.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_plus_math_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="168.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_replay_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="69.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8_fingerprint_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="279.0" layoutY="85.0" prefHeight="482.0" prefWidth="542.0" style="-fx-background-color: #EAEC67;">
+         <children>
+            <ImageView fitHeight="347.0" fitWidth="543.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/-retratos_csp16812487.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblprestamo" layoutY="168.0" prefHeight="314.0" prefWidth="543.0" stylesheets="@../Styling/fullpackstyling.css">
+              <columns>
+                  <TableColumn fx:id="clmnLibro" prefWidth="195.0" text="Libro" />
+                <TableColumn fx:id="clmnlectorlibro" prefWidth="187.0" text="Lector" />
+                  <TableColumn fx:id="clmnfecha" prefWidth="159.0" text="Fecha" />
+              </columns>
+            </TableView>
+            <Label layoutX="67.0" layoutY="47.0" text="VISTA PREVIA" textFill="#00d0ff">
+               <font>
+                  <Font name="Bodoni MT Black" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

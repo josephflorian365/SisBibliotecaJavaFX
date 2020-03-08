@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="827.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.DevolucionesController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="93.0" prefWidth="1034.0" style="-fx-background-color: #DD4F43;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/91fed039cf8b4a4a0d4df144c0fd9dbf.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="242.0" layoutX="795.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/b001c3f847dbc0f4b560862469378977.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/85015_20170511163917.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/unnamed.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/73676_1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="241.0" layoutY="14.0" prefHeight="65.0" prefWidth="556.0" text="LIBROS POR DEVOLVER" textFill="#f7fa00">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="93.0" prefHeight="346.0" prefWidth="578.0">
+         <children>
+            <TableView fx:id="tblPre" prefHeight="347.0" prefWidth="578.0" stylesheets="@../Styling/fullpackstyling.css">
+              <columns>
+                <TableColumn fx:id="clmnIdPre" prefWidth="95.0" text="ID" />
+                <TableColumn fx:id="clmnfechaPre" prefWidth="150.0" text="FECHA-PRESTAMO" />
+                  <TableColumn fx:id="clmnLibro" prefWidth="176.0" text="LIBRO" />
+                  <TableColumn fx:id="clmnLector" prefWidth="163.0" text="LECTOR" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="578.0" layoutY="93.0" prefHeight="347.0" prefWidth="456.0" style="-fx-background-color: #0078D7;">
+         <children>
+            <ImageView fitHeight="347.0" fitWidth="456.0" layoutY="1.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/gettyimages-200255530-002-1024x1024.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="tctLibro" layoutX="180.0" layoutY="72.0" prefHeight="25.0" prefWidth="253.0" />
+            <TextField fx:id="txtLector" layoutX="180.0" layoutY="118.0" prefHeight="25.0" prefWidth="253.0" />
+            <Button fx:id="btnDevolver" layoutX="180.0" layoutY="265.0" mnemonicParsing="false" onAction="#devolverLibro" prefHeight="27.0" prefWidth="253.0" styleClass="buttonautores" stylesheets="@../Styling/fullpackstyling.css" text="DEVOLVER" />
+            <Label alignment="TOP_CENTER" layoutX="180.0" layoutY="23.0" prefHeight="34.0" prefWidth="253.0" text="DEVOLUCIONES" textFill="#fdff4d">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfechaPre" layoutX="180.0" layoutY="163.0" prefHeight="25.0" prefWidth="253.0" />
+            <DatePicker fx:id="cmbDev" layoutX="180.0" layoutY="208.0" prefHeight="25.0" prefWidth="253.0" />
+            <Label layoutX="123.0" layoutY="72.0" text="Libro :" textFill="#e5ff00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="111.0" layoutY="118.0" text="Lector :" textFill="#eeff2e">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="8.0" layoutY="163.0" text="Fecha de Préstamo :" textFill="#e8ff39">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutY="207.0" text="Fecha de Devolución :" textFill="#f7ff00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="440.0" prefHeight="93.0" prefWidth="865.0" style="-fx-background-color: #6DE363;">
+         <children>
+            <ImageView fitHeight="101.0" fitWidth="217.0" layoutX="243.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/descarga.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="101.0" fitWidth="253.0" layoutY="-2.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/b001c3f847dbc0f4b560862469378977.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="101.0" fitWidth="224.0" layoutX="444.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/book-covers.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="393.0" fitWidth="526.0" layoutX="515.0" layoutY="-6.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/devolucion%20libros%20biblioteca%20interna.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="328.0" layoutY="14.0" text="LIBROS DEVUELTOS" textFill="#fcfc00">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblDev" layoutY="536.0" prefHeight="292.0" prefWidth="1034.0" stylesheets="@../Styling/fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="clmnIdDev" prefWidth="63.000030517578125" text="ID" />
+            <TableColumn fx:id="clmnfechaPrestado" prefWidth="204.99996948242188" text="FECHA-PRESTAMO" />
+            <TableColumn fx:id="clmnfechaDev" prefWidth="168.0" text="FECHA-DEVOLUCION" />
+            <TableColumn fx:id="clmnLibroDev" prefWidth="269.0" text="LIBRO" />
+            <TableColumn fx:id="clmnLecDev" prefWidth="327.0" text="LECTOR" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
